@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--&lt;!&ndash; 生成远程服务代理，-->
+    <!--<dubbo:reference id="echoService" interface="xx.xx.x.x." />-->
+
+    <!--&lt;!&ndash; 示例入口 &ndash;&gt;-->
+    <!--<bean id="consumer" class="com.account.consumer.Consumer">-->
+        <!--<property name="echoService" ref="echoService"/>-->
+    <!--</bean>-->
+
+</beans>

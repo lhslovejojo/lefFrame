@@ -1,0 +1,7 @@
+#忽略所有class
+*/target/
+.classpath
+.project
+.settings
+*.class
+/target/

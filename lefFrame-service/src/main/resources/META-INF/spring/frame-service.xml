@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context" xmlns="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <context:component-scan base-package="com.lef.frame.service" />
+  <import resource="classpath*:META-INF/spring/frame-core.xml" />
+
+  <!-- 日志拦截器 
+  <bean id="invokeLogInterceptor" class="com.hnapay.accounts.interceptor.InvokeLogIntercept" />
+  
+  <bean id="accountInterceptorProxy" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+    <property name="beanNames">
+      <list>
+        <value>accountFundInService</value>
+        <value>accountTransferService</value>
+        <value>accountFundOutService</value>
+        <value>accountReversalService</value>
+        <value>accountFrozenService</value>
+        <value>accountPayFrozenGeneralService</value>
+        <value>accountFundQueryService</value>
+        <value>accountGeneralService</value>
+      </list>
+    </property>
+    <property name="interceptorNames">
+      <list>
+        <value>invokeLogInterceptor</value>
+      </list>
+    </property>
+
+  </bean>
+  -->
+</beans>

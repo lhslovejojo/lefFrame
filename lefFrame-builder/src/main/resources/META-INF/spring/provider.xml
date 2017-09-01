@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+  <dubbo:application name="frame_provider"  logger="slf4j" />
+  <dubbo:registry protocol="zookeeper" address="${zkaddress}" />
+  <dubbo:provider  cluster="failfast" retries="0" timeout="6000"/>
+  <dubbo:protocol accesslog="true" name="dubbo" port="${zpport}" />
+  
+  <dubbo:service interface="com.lef.frame.api.PurchaseService" ref="purchaseService" version="${zkversion}" />
+  
+</beans>
