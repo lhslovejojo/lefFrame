@@ -18,7 +18,7 @@ package com.alibaba.dubbo.demo.consumer;
 /**
  * @author Jinkai.Ma
  */
-public class DemoJavaConfigConsumer {
+public class StartTest {
     public static void main(String[] args) {
         // add `javaconfig` to args
         String[] customArgs = new String[]{"javaconfig"};

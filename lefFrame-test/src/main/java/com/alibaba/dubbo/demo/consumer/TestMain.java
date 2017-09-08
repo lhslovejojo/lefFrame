@@ -28,7 +28,7 @@ import com.lef.frame.api.request.PurchaseRequest;
 import com.lef.frame.api.result.PaymentResult;
 
 @Component
-public class DemoAction {
+public class TestMain {
 
 	@Reference(version="1.0.0")
 	private PurchaseService purchaseService;

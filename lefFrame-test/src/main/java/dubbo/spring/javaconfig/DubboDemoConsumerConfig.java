@@ -22,7 +22,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author Jinkai.Ma
+ * 
+ * @author lihongsong
+ *
  */
 @Configuration
 public class DubboDemoConsumerConfig {

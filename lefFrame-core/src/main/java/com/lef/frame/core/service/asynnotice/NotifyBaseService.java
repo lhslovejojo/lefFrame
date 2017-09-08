@@ -2,6 +2,7 @@ package com.lef.frame.core.service.asynnotice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.alibaba.fastjson.JSON;
 import com.lef.frame.api.result.ResultBase;
 import com.lef.frame.common.emuns.SendStatusEmun;
 import com.lef.frame.core.sevice.AsynNoticeService;
@@ -17,6 +18,8 @@ public abstract class NotifyBaseService<T extends ResultBase> {
 
 	public void sendNotify(T t, String requestNo) {
 		try {
+			String contentJson = JSON.toJSONString(t);
+			asynNoticeService.updateContent(requestNo,contentJson);
 			asynNoticeService.changeSendStatus(requestNo, SendStatusEmun.SENDING);
 			if (send(t)) {
 				asynNoticeService.changeSendStatus(requestNo, SendStatusEmun.SUCCESS);

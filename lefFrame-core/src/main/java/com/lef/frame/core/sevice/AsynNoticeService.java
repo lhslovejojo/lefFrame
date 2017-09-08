@@ -34,4 +34,9 @@ public class AsynNoticeService {
 		asynNoticeInfo.setSendStatus(status.getCode());
 		asynNoticeInfoRepository.update(asynNoticeInfo);
 	}
+	public void updateContent(String bizNo, String content) {
+		AsynNoticeInfo asynNoticeInfo = asynNoticeInfoRepository.selectByBizNo(bizNo);
+		asynNoticeInfo.setContent(content);
+		asynNoticeInfoRepository.update(asynNoticeInfo);
+	}
 }
